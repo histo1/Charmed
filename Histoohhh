@@ -1,0 +1,76 @@
+-- Charmed: Reborn UI by histo
+
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+    Name = "Charmed: Reborn",
+    LoadingTitle = "Rayfield UI",
+    LoadingSubtitle = "by histo",
+    ConfigurationSaving = {
+        Enabled = true,
+        FolderName = "CharmedRebornConfig",
+        FileName = "Charmed_Config"
+    },
+    Discord = {
+        Enabled = false,
+        Invite = "",
+    },
+    KeySystem = false
+})
+
+-- "The Triad" Tab
+local TriadTab = Window:CreateTab("The Triad", 4483362458)
+
+-- Candor Button
+TriadTab:CreateButton({
+    Name = "Candor",
+    Callback = function()
+        local args = { "Candor" }
+        game:GetService("ReplicatedStorage"):WaitForChild("Change"):FireServer(unpack(args))
+    end
+})
+
+-- Asmodeus Button
+TriadTab:CreateButton({
+    Name = "Asmodeus",
+    Callback = function()
+        local args = { "Asmodeus" }
+        game:GetService("ReplicatedStorage"):WaitForChild("Change"):FireServer(unpack(args))
+    end
+})
+
+-- Baliel Button
+TriadTab:CreateButton({
+    Name = "Baliel",
+    Callback = function()
+        local args = { "Baliel" }
+        game:GetService("ReplicatedStorage"):WaitForChild("Change"):FireServer(unpack(args))
+    end
+})
+
+-- "best demon (source)" Tab
+local DemonTab = Window:CreateTab("best demon (source)", 4483362458)
+
+-- Source Button
+DemonTab:CreateButton({
+    Name = "Source",
+    Callback = function()
+        local args = { "Source" }
+        game:GetService("ReplicatedStorage"):WaitForChild("Change"):FireServer(unpack(args))
+    end
+})
+
+-- "Others" Tab
+local OthersTab = Window:CreateTab("Others", 4483362458)
+
+-- Wyatt Button
+OthersTab:CreateButton({
+    Name = "Wyatt",
+    Callback = function()
+        local args = { "Wyatt" }
+        game:GetService("ReplicatedStorage"):WaitForChild("Change"):FireServer(unpack(args))
+    end
+})
+
+-- Initialize UI
+Window:Init()
